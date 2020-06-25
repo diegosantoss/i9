@@ -1,11 +1,16 @@
-import { useRouter } from 'next/router'
+import { useRouter } from 'next/router';
+import Layout from '../../components/Layout';
 
 const Post = () => {
   const router = useRouter()
   const { pid } = router.query;
   console.log(router);
 
-  return <p>Post: {pid}</p>
+  return (
+    <Layout>
+      <p>Post: {pid}</p>
+    </Layout>
+  )
 }
 
-export default Post
+export default Post; 
