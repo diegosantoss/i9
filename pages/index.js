@@ -17,7 +17,7 @@ export default function Home() {
           </Link>
         </li>
         <li>
-          <Link href="/about">
+          <Link href="/[service]" as="/about">
             <a>About Us</a>
           </Link>
         </li>
