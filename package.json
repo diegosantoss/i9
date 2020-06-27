@@ -5,11 +5,13 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start" 
+    "start": "next start"
   },
   "dependencies": {
     "next": "9.4.4",
+    "node-fetch": "^2.6.0",
     "react": "16.13.1",
-    "react-dom": "16.13.1"
+    "react-dom": "16.13.1",
+    "react-slick": "^0.26.1"
   }
 }

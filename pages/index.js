@@ -1,17 +1,18 @@
 import Head from 'next/head';
-import Layout from '../components/Layout';
+import BaseApp from '../components/BaseApp';
 
 export default function Home() {
   return (
-    <Layout>
+    <BaseApp>
       <div className="container">
         <Head>
-          <title>Create Next App</title>
+          <title>i9 Corporation</title>
           <link rel="icon" href="/favicon.ico" />
         </Head>
       </div>
-    </Layout>
+    </BaseApp>
   )
 }
 
 
+ 
