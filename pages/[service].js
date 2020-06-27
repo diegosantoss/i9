@@ -1,5 +1,5 @@
 import { useRouter } from 'next/router';
-import Layout from '../components/Layout';
+import BaseApp from '../components/BaseApp';
 
 const Service = () => {
   const router = useRouter()
@@ -7,9 +7,9 @@ const Service = () => {
   console.log(router);
 
   return (
-    <Layout>
+    <BaseApp>
       <p>Service: {service}</p>
-    </Layout>
+    </BaseApp>
   )
 }
 

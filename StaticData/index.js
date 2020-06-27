@@ -1,29 +1,33 @@
 const data = {
   logo: { 
     link: "/", 
-    dark: "bbbbbbb", 
-    light: "aaaaaaa" 
+    dark: "./images/logo_dark.png", 
+    light: "./images/logo_light.png",
+    title: "Logo i9 Corporation"
   },
   menu: [ 
-    { link: "quem-somos", text: "Quem Somos" },
-    { link: "diferenciais", text: "Diferenciais" }, 
-    { link: "servicos", text: "Serviços" }, 
-    { link: "areas-de-atuacao", text: "Áreas de Atuação" } 
+    { link: "#quem-somos", text: "Quem Somos" },
+    { link: "#diferenciais", text: "Diferenciais" }, 
+    { link: "#servicos", text: "Serviços" }, 
+    { link: "#areas-de-atuacao", text: "Áreas de Atuação" } 
   ],
   slide: [
     { image: "aaaaaa", text: "Soluções integradas para facilitar o dia a dia da sua empresa" },
     { image: "aaaaaa", text: "Soluções integradas para facilitar o dia a dia da sua empresa" },
     { image: "aaaaaa", text: "Soluções integradas para facilitar o dia a dia da sua empresa" }
   ],
-  uteis: {
+  useful: {
     title: "i9 Corporation, há 14 anos oferecendo serviços de qualidade com foco em resultados.",
+    text: "Entre em contato conosco",
+    footer_image: "./images/budget-orcamento-i9-corporation.jpg",
+    tel: "TEL: (11) 3721-3734",
+    budget: {
+      link: "#orcamento",
+      footer: "Solicite o orçamento >",
+      header: "Orçamento >"
+    },
     address: "Rua M.M.D.C, 450 - 5º Andar | Sala 501 a 503 - Butantã São Paulo, SP | CEP 05510-020",
-    copyright: "Copyright © i9 Corporation",
-    options: [
-      { link: "#", text: "Entre em contato conosco" },
-      { link: "#", text: "TEL: (11) 3721-3734" },
-      { link: "orcamento", text: "Orçamento >" }
-    ],
+    copyright: "Copyright © i9 Corporation"
   },
   about: { 
     title: "Conheça a i9 Corporation", 
@@ -68,9 +72,9 @@ const data = {
     ]
   },
   socials: [
-    { icon: "", link: ""},
-    { icon: "", link: ""},
-    { icon: "", link: ""},
+    { title: "LinkdIn da i9 Corporation", icon: "./images/linkedin-i9-corporation.png", link: "https://www.linkedin.com/company/i9-corporation/"},
+    { title: "Instagram da i9 Corporation", icon: "./images/instagram-i9-corporation.png", link: "/"},
+    { title: "Facebook da i9 Corporation",  icon: "./images/facebook-i9-corporation.png", link: "https://www.facebook.com/pages/category/Product-Service/I9-Corporation-102393727936166/"},
   ]
 };
 

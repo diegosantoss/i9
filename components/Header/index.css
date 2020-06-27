@@ -1,0 +1,39 @@
+header{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 0;
+}
+
+.logo{}
+
+.logo a{}
+
+.logo a img{
+  height: 45px;
+}
+
+nav.menu{}
+
+nav.menu ul{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+}
+
+nav.menu ul li{
+
+}
+
+nav.menu ul li a{
+  font-size: 16px;
+  color: #a83330;
+  padding: 20px;
+}
+
+nav.menu ul li:last-child a{
+  padding-right: 0;
+}
