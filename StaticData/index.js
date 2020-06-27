@@ -1,5 +1,3 @@
-import React from 'react';
-
 const data = {
   logo: { 
     link: "/", 
@@ -76,5 +74,4 @@ const data = {
   ]
 };
 
-const DefaultContext = React.createContext(data);
-export default DefaultContext;
+export default data;
