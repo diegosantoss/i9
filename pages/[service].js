@@ -3,7 +3,6 @@ import BaseApp from '../components/BaseApp';
 import Parser from 'html-react-parser';
 
 const Service = ({data}) => {
-  console.log(data)
   const router = useRouter();
   const service = data.services.options.filter(item => item.slug === router.query.service)[0];
 
@@ -28,9 +27,9 @@ const Service = ({data}) => {
 
 
 Service.getInitialProps = async function() {
-  // const url = window.location.origin + '/data.json';
-  const res = await fetch('http://localhost:3000/data.json')
-  const data = await res.json()
+  // const res = await fetch('http://localhost:3000/data.json');
+  const res = await fetch('https://i9.diegosantoss.vercel.app/data.json');
+  const data = await res.json();
 
   return {
     data
