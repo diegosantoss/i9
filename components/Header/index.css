@@ -37,3 +37,72 @@ nav.menu ul li a{
 nav.menu ul li:last-child a{
   padding-right: 0;
 }
+
+.menu_mobile{
+  display: none;
+}
+
+@media screen and (max-width: 768px){
+  body.menu_opened{
+    overflow-y: hidden;
+  }
+
+  nav.menu{
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, .6);
+    opacity: -1;
+    visibility: hidden;
+    transition: all .2s linear;
+  }
+
+  nav.menu.menu_opened{
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  nav.menu ul{
+    flex-direction: column;
+    justify-content: space-evenly;
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    width: 80vw;
+    background-color: #FFFFFF;
+    transform: translateX(100vw);
+    transition: all .2s linear;
+  }
+
+  nav.menu.menu_opened ul{
+    transform: translateX(0);
+  }
+  
+  nav.menu ul li{
+    height: 100%;
+    width: 100%;
+  }
+  
+  nav.menu ul li a{
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;    
+  }
+
+  .menu_mobile{
+    display: flex;
+    width: 35px;
+  }
+
+  .menu_mobile img{
+    width: 100%;
+  }
+  
+}
