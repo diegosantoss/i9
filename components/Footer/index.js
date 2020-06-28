@@ -21,7 +21,7 @@ const Footer = () => {
         </section>
       </section>
       <section className="footer_second_container">
-        <seection className="container">
+        <section className="container">
           <section className="footer_second_content">
             <section className="footer_logo">
               <Link href={logo.link}>
@@ -38,7 +38,7 @@ const Footer = () => {
               <p>{useful.copyright}</p>
             </section>
           </section>
-        </seection>
+        </section>
       </section>
     </footer>
   )

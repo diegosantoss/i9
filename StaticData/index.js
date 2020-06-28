@@ -6,10 +6,10 @@ const data = {
     title: "Logo i9 Corporation"
   },
   menu: [ 
-    { link: "#quem-somos", text: "Quem Somos" },
-    { link: "#diferenciais", text: "Diferenciais" }, 
-    { link: "#servicos", text: "Serviços" }, 
-    { link: "#areas-de-atuacao", text: "Áreas de Atuação" } 
+    { link: "./#quem-somos", text: "Quem Somos" },
+    { link: "./#diferenciais", text: "Diferenciais" }, 
+    { link: "./#servicos", text: "Serviços" }, 
+    { link: "./#areas-de-atuacao", text: "Áreas de Atuação" } 
   ],
   slide: [
     { image: "aaaaaa", text: "Soluções integradas para facilitar o dia a dia da sua empresa" },
@@ -48,14 +48,62 @@ const data = {
   services: {
     title: "Serviços", text: "As soluções de Facilities da i9 Corporation garantem uma gestão moderna através de diagnósticos precisos e profissionais capacitados.",
     options: [
-      { link: "#", image: "aaaa", text: "Portaria / Controle de acesso" },
-      { link: "#", image: "aaaa", text: "Limpeza e conservação" },
-      { link: "#", image: "aaaa", text: "Recepção" },
-      { link: "#", image: "aaaa", text: "Manutenção e zeladoria" },
-      { link: "#", image: "aaaa", text: "Proteção e combate a incêndios" },
-      { link: "#", image: "aaaa", text: "Jardinagem" },
-      { link: "#", image: "aaaa", text: "Copeira" },
-      { link: "#", image: "aaaa", text: "Mensageria" },
+      { 
+        link: "/portaria-e-controle-de-acesso", 
+        image: "./images/servicos-portaria-controle-de-acesso-i9-corporation.jpg", 
+        text: "A rotina de empresas e condomínios exige equipes qualificadas na portaria. A i9 Corporation é especialista na terceirização de serviços do segmento. Seja Líder de Portaria ou Controlador de Acesso, todos os profissionais são altamente qualificados e responsáveis para controlar o acesso de veículos, funcionários e visitantes e gerar relatórios de ocorrências diárias. <br /><br /> Enquanto você foca na sua atividade principal, a i9 cuida de todo o resto. ", 
+        title: "Portaria / Controle de acesso", 
+        slug: "portaria-e-controle-de-acesso" 
+      },
+      { 
+        link: "/limpeza-e-conservacao", 
+        image: "./images/servicos-limpeza-conservacao-i9-corporation.jpg",  
+        title: "Limpeza e conservação",
+        text: "A equipe de limpeza da i9 Corporation é treinada para cuidar com excelência da sua empresa ou condomínio, seja ele residencial ou administrativo. Os profissionais colocam em prática o cronograma de limpeza, sempre seguindo normas de segurança, higiene, qualidade e proteção ao meio ambiente. <br /><br /> Você não precisa se preocupar com conservação, higienização e coleta de lixo. Nossa equipe está preparada para cuidar de tudo, conforme padrão e cronograma pré-definido.",
+        slug: "limpeza-e-conservacao"
+      },
+      { 
+        link: "/recepcao", 
+        image: "./images/servicos-recepcao-i9-corporation.jpg",
+        text: "A recepção e a portaria são o primeiro contato das pessoas com empresas e condôminos e, por isso, o atendimento deve ser bem alinhado com a administração do local. O profissional que exerce esta função deve ser ordial e atencioso, além de ser bastante responsável e ágil. Ter boa memória e organização ajuda nos processos, assim como a proatividade. Esse é o padrão do serviço de Facility da i9.", 
+        title: "Recepção",
+        slug: "recepcao"
+      },
+      { 
+        link: "/manutencao-e-zeladoria", 
+        image: "./images/servicos-manutenca-zeladoria-i9-corporation.jpg", 
+        text: "Os profissionais que cuidam da manutenção e zeladoria são os principais responsáveis por tudo funcionando perfeitamente dentro de um condomínio ou empresa. Para que tudo seja feito com excelência é importante que estes profissionais sejam altamente qualificados em suas funções. <br /><br /> Para facilitar seu dia a dia, a i9 Corporation tem os profissionais certos para manter tudo funcionando perfeitamente sem precisar que você se preocupe. ", 
+        title: "Manutenção e zeladoria", 
+        slug: "manutencao-e-zeladoria" 
+      },
+      { 
+        link: "/protecao-e-combate-incendios", 
+        image: "./images/servicos-protecao-combate-incendios-i9-corporation.jpg",  
+        text: "Nada é mais importante do que a segurança da sua empresa ou condomínio. Por isso, a i9 Corporation tem profissionais qualificados para agir em caso de incêndio, primeiros socorros, atendimentos em emergências, proteção a vida, meio ambiente e do patrimônio. <br /><br /> Você não precisa se preocupar com a contratação de bombeiros. Tudo fica por conta da i9. ", 
+        title: "Proteção e combate a incêndios", 
+        slug: "protecao-e-combate-incendios" 
+      },
+      { 
+        link: "/jardinagem", 
+        image: "./images/servicos-jardinagem-i9-corporation.jpg", 
+        text: "Para cuidar da grama e do paisagismo da sua empresa ou condomínio, a i9 trabalha com profissionais de jardinagem qualificados. Estes são responsáveis por fazer a manutenção, cortar, regar, cultivar canteiros, plantar sementes, manter a estética e operar máquinas específicas da função de jardinagem, entre outras funções.", 
+        title: "Jardinagem", 
+        slug: "jardinagem" 
+      },
+      { 
+        link: "/copeira", 
+        image: "./images/servicos-copeira-i9-corporation.jpg", 
+        text: "Para facilitar seu dia a dia é ideal ter uma equipe de apoio. As copeiras, por exemplo, auxiliam diariamente fazendo e servindo café e cuidando da higiene da copa no que está relacionado à xícaras, copos e cafés. A presença deste profissional, que deve ser responsável e cordial, garante um cotidiano mais agradável. Para contratar este serviço, você pode contar com a equipe da i9 Corporation. ", 
+        title: "Copeira", 
+        slug: "copeira" 
+      },
+      { 
+        link: "/mensageria", 
+        image: "./images/servicos-mensageria-i9-corporation.jpg", 
+        text: "O serviço de mensageria consiste em cuidar do recebimento, registro e envio de correspondências, documentos e processos de procedência interna e externa, compreendendo:<br />• Triagem<br /> • Preparação e expedição, via malote de correspondências<br /> • Recepção, abertura e expedição de malotes<br /><br /> Para contratar este serviço para ua empresa ou condomínio, conte com a equipe da i9 Corporation. ", 
+        title: "Mensageria", 
+        slug: "mensageria" 
+      },
     ]
   },
   expertise: {
