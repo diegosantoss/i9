@@ -10,7 +10,7 @@ const Service = ({data}) => {
     <BaseApp>
       <section className="service_container">
         <section className="service_image">
-          <img width="100%" src={service.image} />
+          <img width="1920" height="1069" src={service.image} />
         </section>
         <section className="service_content">
           <section className="container">
