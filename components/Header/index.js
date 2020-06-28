@@ -4,6 +4,14 @@ import StaticData from '../../StaticData/index';
 export default function Header() {
   const { logo, menu } = StaticData;
 
+  const handleClickMenu = () => {
+    const body = document.querySelector('body');
+    const navMenu = document.querySelector('nav.menu');
+
+    navMenu.classList.toggle('menu_opened');
+    body.classList.toggle('menu_opened');
+  }
+
   return (
     <section className="container">
       <header>
@@ -12,7 +20,11 @@ export default function Header() {
             <a><img src={logo.dark} alt={logo.title} title={logo.title}/> </a>
           </Link>
         </section>
-        <nav className="menu">
+        <nav className="menu" onClick={ (e) => {
+          if(e.target.classList.contains('menu_opened')){
+            handleClickMenu();
+          }
+        }}>
           <ul>
             {menu.map(item => (
               <li key={item.link}>
@@ -23,6 +35,9 @@ export default function Header() {
             ))}            
           </ul>
         </nav>
+        <section className="menu_mobile" onClick={() => handleClickMenu()}>
+          <img src="./images/menu-mobile-i9-corporation.png" alt="Menu Mobile i9 Corporation" title="Menu Mobile i9 Corporation" />
+        </section>
       </header>
     </section>
   )
