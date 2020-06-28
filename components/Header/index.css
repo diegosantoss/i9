@@ -51,8 +51,8 @@ nav.menu ul li:last-child a{
     position: fixed;
     right: 0;
     top: 0;
-    height: 100%;
-    width: 100%;
+    /* height: 100%;
+    width: 100%; */
     background-color: rgba(0, 0, 0, .6);
     opacity: -1;
     visibility: hidden;
@@ -70,8 +70,8 @@ nav.menu ul li:last-child a{
     position: fixed;
     right: 0;
     top: 0;
-    height: 100vh;
-    width: 80vw;
+    /* height: 100%;
+    width: 80%; */
     background-color: #FFFFFF;
     transform: translateX(100vw);
     transition: all .2s linear;
@@ -84,8 +84,8 @@ nav.menu ul li:last-child a{
   /* //aadsadadasds */
 
   nav.menu ul li{
-    height: 100%; 
-    width: 100%;
+    /* height: 100%; 
+    width: 100%; */
   }
   
   nav.menu ul li a{
@@ -94,8 +94,8 @@ nav.menu ul li:last-child a{
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    width: 100%;
-    height: 100%;    
+    /* width: 100%;
+    height: 100%;     */
   }
 
   .menu_mobile{
