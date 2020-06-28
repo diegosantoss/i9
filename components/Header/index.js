@@ -20,14 +20,18 @@ export default function Header() {
             <a><img src={logo.dark} alt={logo.title} title={logo.title}/> </a>
           </Link>
         </section>
-        <nav className="menu" onClick={ (e) => {
-          if(e.target.classList.contains('menu_opened')){
+        <nav className="menu" onClick={ () => {
+          if(document.querySelector('.menu_opened')){
             handleClickMenu();
           }
         }}>
           <ul>
             {menu.map(item => (
-              <li key={item.link}>
+              <li key={item.link} onClick={ () => {
+                if(document.querySelector('.menu_opened')){
+                  handleClickMenu();
+                }
+              }}>
                 <Link href={item.link}>
                   <a>{item.text}</a>
                 </Link>
