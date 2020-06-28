@@ -81,8 +81,10 @@ nav.menu ul li:last-child a{
     transform: translateX(0);
   }
   
+  /* //aadsadadasds */
+
   nav.menu ul li{
-    height: 100%;
+    height: 100%; 
     width: 100%;
   }
   
