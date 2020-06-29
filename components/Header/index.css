@@ -71,6 +71,7 @@ nav.menu ul li:last-child a{
   nav.menu.menu_opened{
     opacity: 1;
     visibility: visible;
+    z-index: 999;
   }
   
   nav.menu ul{

@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import BaseApp from '../components/BaseApp';
+import ServicesHome from '../components/Services';
 
 import StaticData from '../StaticData/index';
 
@@ -12,13 +13,8 @@ export default function Home() {
         <title>i9 Corporation</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>    
-      <div className="container">
-        {services.options.map(item => (
-          <Link href={item.link}>
-            <a>{item.title}</a>
-          </Link>
-        ))}
-      </div>
+
+      <ServicesHome services={services} />
     </BaseApp>
   )
 }

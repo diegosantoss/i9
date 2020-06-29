@@ -20,6 +20,7 @@
   top: 0;
   display: flex;
   height: 100%;
+  background-size: contain;
 }
 
 .service_infos{
@@ -27,14 +28,37 @@
   width: 50%;
   padding: 30px;
   color: #FFF;
+  box-sizing: border-box;
 }
 
 .service_infos h1{
-  font-size: 35px;
+  font-size: 32px;
 }
 
 .service_infos p{
-  font-size: 18px;
+  font-size: 17px;
   margin-top: 25px;
   line-height: 1.4;
+}
+
+@media screen and (max-width: 991px){
+  .service_infos{
+    width: 100%;
+    padding: 20px;
+  }
+}
+
+@media screen and (max-width: 768px){
+  .service_image {
+    display: none;
+  }
+
+  .service_content{
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    padding: 50px 0;
+    box-sizing: border-box;
+    position: inherit;
+  }
 }

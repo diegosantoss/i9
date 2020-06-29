@@ -12,7 +12,7 @@ const Service = ({data}) => {
         <section className="service_image">
           <img width="1920" src={service.image} />
         </section>
-        <section className="service_content">
+        <section className="service_content" style={{ backgroundImage: `url(${service.image})` }}>
           <section className="container">
             <section className="service_infos">
               <h1>{service.title}</h1>
@@ -27,8 +27,7 @@ const Service = ({data}) => {
 
 
 Service.getInitialProps = async function() {
-  // const res = await fetch('http://localhost:3000/data.json');
-  const res = await fetch('https://i9.diegosantoss.vercel.app/data.json');
+  const res = await fetch(`${process.env.URL}/data.json`);
   const data = await res.json();
 
   return {
