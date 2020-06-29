@@ -1,5 +1,3 @@
-import Link from 'next/link';
-
 const ServicesHome = ({services}) => {
   return (
     <section className="services_container">
@@ -12,9 +10,9 @@ const ServicesHome = ({services}) => {
         <section className="services_content">
           {services.options.map(item => (
             <section key={item.title} className="services_item" style={{ backgroundImage: `url(${item.image})`}}>
-              <Link  href={`/[services]?url=${item.link}`}   as={item.link}>
-                <a>{item.title}</a>
-              </Link>
+              <a href={item.link}>
+                {item.title}
+              </a>
             </section>
           ))}
         </section>
@@ -23,4 +21,4 @@ const ServicesHome = ({services}) => {
   );
 }
 
-export default ServicesHome; 
+export default ServicesHome;
