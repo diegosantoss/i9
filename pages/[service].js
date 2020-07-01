@@ -26,7 +26,7 @@ const Service = ({data}) => {
 }
 
 
-Service.getStaticProps = async function() {
+Service.getInitialProps = async function() {
   const res = await fetch(`${process.env.URL}/data.json`);
   const data = await res.json();
 
