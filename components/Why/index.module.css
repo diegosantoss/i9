@@ -5,8 +5,43 @@
 
 .why_texts{}
 
-.why_texts .h2{
+.why_texts h2{
   color: #FFF;
 }
 
+ .why_content{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 15px;
+ }
  
+ .why_content_item{
+   width: 50%;
+   box-sizing: border-box;
+ }
+
+ .why_content_item:nth-child(odd){
+   padding-right: 25px;
+ }
+ 
+ .why_content_item img{}
+ 
+ .why_content_item p{
+  color: #FFF;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 1.4;
+ }
+
+ @media screen and (max-width: 991px){
+  .why_content_item{
+    width: 100%;
+  }
+
+  .why_content_item:nth-child(odd){
+    padding-right: 0px;
+  }
+ }
