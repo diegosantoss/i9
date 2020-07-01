@@ -1,18 +1,23 @@
+import Link from 'next/link';
+import styles from './services.module.css';
+
 const ServicesHome = ({services}) => {
   return (
-    <section className="services_container">
+    <section className={styles.services_container}>
       <section className="container">
-        <section className="services_texts">
-          <h2>{services.title}</h2>
+        <section className={styles.services_texts}>
+          <h2 className="h2_default">{services.title}</h2>
           <p>{services.text}</p>
         </section>
 
-        <section className="services_content">
+        <section className={styles.services_content}>
           {services.options.map(item => (
-            <section key={item.title} className="services_item" style={{ backgroundImage: `url(${item.image})`}}>
-              <a href={item.link}>
-                {item.title}
-              </a>
+            <section key={item.title} className={styles.services_item} style={{ backgroundImage: `url(${item.image})`}}>
+              <Link href={item.link}>
+                <a>
+                  {item.title} 
+                </a>                
+              </Link>
             </section>
           ))}
         </section>

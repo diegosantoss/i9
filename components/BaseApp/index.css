@@ -12,3 +12,9 @@
   margin: auto;
   display: block;
 }
+
+.h2_default{
+  font-size: 40px;
+  line-height: 1;
+  color: #a83330;
+}

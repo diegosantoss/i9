@@ -1,19 +1,14 @@
-import Head from 'next/head';
-import Link from 'next/link';
 import BaseApp from '../components/BaseApp';
 import ServicesHome from '../components/Services';
+import Why from '../components/Why';
 
 import StaticData from '../StaticData/index';
 
 export default function Home() {
-  const { services } =  StaticData;
+  const { services, why } =  StaticData;
   return (
     <BaseApp>
-      <Head>
-        <title>i9 Corporation</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>    
-
+      <Why why={why} />
       <ServicesHome services={services} />
     </BaseApp>
   )
