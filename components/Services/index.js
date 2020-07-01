@@ -13,10 +13,10 @@ const ServicesHome = ({services}) => {
         <section className={styles.services_content}>
           {services.options.map(item => (
             <section key={item.title} className={styles.services_item} style={{ backgroundImage: `url(${item.image})`}}>
-              <Link href={item.link}>
+              <Link href={item.link} as={item.link} passHref>
                 <a>
-                  {item.title} 
-                </a>                
+                  {item.title}
+                </a>
               </Link>
             </section>
           ))}
