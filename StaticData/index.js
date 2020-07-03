@@ -13,8 +13,8 @@ const data = {
   ],
   slide: [
     { image: "./images/solucoes-integradas-i9-corporation.jpg", text: "Soluções integradas para facilitar o dia a dia da sua empresa" },
-    { image: "./images/-i9-corporation.jpg", text: "Soluções integradas para facilitar o dia a dia da sua empresa" },
-    { image: "./images/0-i9-corporation.jpg", text: "Soluções integradas para facilitar o dia a dia da sua empresa" }
+    { image: "./images/oferecemos-gestao-empresas-i9-corporation.jpg", text: "Oferecemos um moderno sistema de gestão para empresas e condomínios" },
+    { image: "./images/14-anos-de-qualidade-i9-corporation.jpg", text: "Há 14 anos oferecendo serviço de qualidade com foco em resultados" }
   ],
   useful: {
     title: "i9 Corporation, há 14 anos oferecendo serviços de qualidade com foco em resultados.",
