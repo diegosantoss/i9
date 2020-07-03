@@ -2,19 +2,22 @@ import BaseApp from '../components/BaseApp';
 
 import ServicesHome from '../components/Services';
 import Why from '../components/Why';
+import Contact from '../components/Contact';
+import Slide from '../components/Slide';
 
 import StaticData from '../StaticData/index';
 
-export default function Home() {
-  const { services, why } = StaticData;
+const Home = () => {
+  const { slide, useful, services, why } = StaticData;
 
   return (
     <BaseApp>
-      <Why why={why} a="a"/>
+      <Slide slide={slide} />
+      <Contact useful={useful} />
+      <Why why={why} />
       <ServicesHome services={services} />
     </BaseApp>
   )
 }
 
-
- 
+export default Home

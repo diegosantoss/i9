@@ -12,9 +12,9 @@ const data = {
     { link: "./#areas-de-atuacao", text: "Áreas de Atuação" } 
   ],
   slide: [
-    { image: "aaaaaa", text: "Soluções integradas para facilitar o dia a dia da sua empresa" },
-    { image: "aaaaaa", text: "Soluções integradas para facilitar o dia a dia da sua empresa" },
-    { image: "aaaaaa", text: "Soluções integradas para facilitar o dia a dia da sua empresa" }
+    { image: "./images/solucoes-integradas-i9-corporation.jpg", text: "Soluções integradas para facilitar o dia a dia da sua empresa" },
+    { image: "./images/-i9-corporation.jpg", text: "Soluções integradas para facilitar o dia a dia da sua empresa" },
+    { image: "./images/0-i9-corporation.jpg", text: "Soluções integradas para facilitar o dia a dia da sua empresa" }
   ],
   useful: {
     title: "i9 Corporation, há 14 anos oferecendo serviços de qualidade com foco em resultados.",
@@ -24,7 +24,7 @@ const data = {
     budget: {
       link: "#orcamento",
       footer: "Solicite o orçamento >",
-      header: "Orçamento >"
+      header: "ORÇAMENTO >"
     },
     address: "Rua M.M.D.C, 450 - 5º Andar | Sala 501 a 503 - Butantã São Paulo, SP | CEP 05510-020",
     copyright: "Copyright © i9 Corporation"

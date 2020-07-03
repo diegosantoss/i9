@@ -1,4 +1,6 @@
-.services_container{}
+.services_container{
+  padding: 60px 0;
+}
 
 .services_texts{
   text-align: center;
