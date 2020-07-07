@@ -1,4 +1,5 @@
 import StaticData from '../../StaticData/index';
+import { Event } from '../Tracking';
 
 export default function Header() {
   const { logo, menu } = StaticData;
@@ -19,6 +20,7 @@ export default function Header() {
     if(ref){ 
       window.scrollTo({ top: ref.offsetTop, behavior: 'smooth' });
       window.history.pushState('', '', link);
+      Event('menu', 'click', link);
 
     } else {
       window.location.href = './' + link;
