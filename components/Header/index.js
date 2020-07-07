@@ -1,10 +1,7 @@
 import StaticData from '../../StaticData/index';
-import smoothscroll from 'smoothscroll-polyfill';
 
 export default function Header() {
   const { logo, menu } = StaticData;
-
-  smoothscroll.polyfill();
 
   const handleClickMenu = () => {
     const body = document.querySelector('body');
