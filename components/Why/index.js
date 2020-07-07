@@ -2,7 +2,7 @@ import styles from './index.module.css';
 
 const Why = ({why}) => {
   return (
-    <section className={styles.why_container}>
+    <section className={styles.why_container} id="diferenciais">
       <section className="container">
         <section className={styles.why_texts}>
           <h2 className="h2_default">{why.title}</h2>

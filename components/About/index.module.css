@@ -1,0 +1,40 @@
+.about_container {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.about_texts {
+  box-sizing: border-box;
+  padding: 130px 0 40px;
+}
+
+.about_texts h2 {
+  line-height: 1.2;
+}
+
+.about_content {
+}
+
+.about_content_item {
+  width: 405px;
+  box-sizing: border-box;
+  padding: 0 0 130px 0;
+}
+
+.about_content_item p {
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 1.4;
+}
+
+@media screen and (max-width: 991px){
+  .about_texts, .about_content{
+    background-color: rgba(255, 255, 255, .7);
+    text-align: center;
+  }
+
+  .about_content_item{
+    width: 100%;
+  }
+}

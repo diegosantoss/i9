@@ -30,8 +30,8 @@ const data = {
     copyright: "Copyright © i9 Corporation"
   },
   about: { 
-    title: "Conheça a i9 Corporation", 
-    image: "aasdasdas", 
+    title: "Conheça a<br />i9 Corporation", 
+    image: "https://www.rmit.edu.au/content/dam/rmit/vn/en/assets-for-production/images/rmit-textures/rmit-vietnam-textures/sgs-rmit-texture-23.jpg", 
     text: "Há mais de 14 anos, a i9 Corporation oferece as mais modernas soluções em Facilities com um sistema de gestão que atende aos diversos segmentos corporativos, condomínios residenciais e/ou administrativos.<br /><br /> Trabalhando com foco em resultados, competência e inovação, reforçamos nosso compromisso com os clientes de oferecer sempre a melhor relação entre custo e benefício.<br /><br /> Nossas soluções personalizadas tornam a prestação de serviços completa e eficiente para que você possa focar na sua atividade principal sem se preocupar com a gestão de Facilities. " 
   },
   why: {
@@ -107,7 +107,9 @@ const data = {
     ]
   },
   expertise: {
-    title: "Áreas de atuação", text: "A i9 Corporation visa oferecer serviço de qualidade em parceria com grandes empresas do setor privado. Conheça nossas áreas de atuação:",
+    title: "Áreas de atuação", 
+    text: "A i9 Corporation visa oferecer serviço de qualidade em parceria com grandes empresas do setor privado. Conheça nossas áreas de atuação:",
+    image: "https://www.rmit.edu.au/content/dam/rmit/vn/en/assets-for-production/images/rmit-textures/rmit-vietnam-textures/sgs-rmit-texture-23.jpg", 
     options: [
       { icon: "", text: "Indústrias" },
       { icon: "", text: "Hotéis" },

@@ -16,8 +16,8 @@ const Slide = ({slide}) => {
   return (
     <section className={styles.slide_container}>
       <Slider {...settings}>
-        {slide.map(item => (
-          <>
+        {slide.map( (item, index) => (
+          <section key={index}>
             <section className={styles.slide_image} key={item.image}>
               <img src={item.image} width="1920" />
             </section>
@@ -29,7 +29,7 @@ const Slide = ({slide}) => {
                 
               </section>
             </section>
-          </>
+          </section>
         ))}
       </Slider>
       

@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import StaticData from '../../StaticData/index';
 
 export default function Header() {
@@ -12,14 +11,27 @@ export default function Header() {
     body.classList.toggle('menu_opened');
   }
 
+  const handleClickToScroll = (e, link) => {
+    e.preventDefault();
+
+    var ref = document.querySelector(link);
+
+    if(ref){ 
+      window.scrollTo({ top: ref.offsetTop, behavior: 'smooth' });
+      window.history.pushState('', '', link);
+
+    } else {
+      window.location.href = './' + link;
+    }
+
+  }
+
   return (
     <section className="header_container">
       <section className="container">
         <header>
           <section className="logo">
-            <Link href={logo.link}>
-              <a><img src={logo.dark} alt={logo.title} title={logo.title}/> </a>
-            </Link>
+            <a href={logo.link}><img src={logo.dark} alt={logo.title} title={logo.title}/> </a>
           </section>
           <nav className="menu" onClick={ () => {
             if(document.querySelector('.menu_opened')){
@@ -33,9 +45,7 @@ export default function Header() {
                     handleClickMenu();
                   }
                 }}>
-                  <Link href={item.link}>
-                    <a>{item.text}</a>
-                  </Link>
+                  <a href={item.link}  onClick={ (e) => handleClickToScroll(e, item.link.replace('./', ''))}>{item.text}</a>
                 </li>
               ))}            
             </ul>
