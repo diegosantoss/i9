@@ -1,4 +1,4 @@
-import StaticData from '../../StaticData/index';
+import StaticData from '../../StaticData';
 import { Event } from '../Tracking';
 
 export default function Header() {
@@ -6,7 +6,7 @@ export default function Header() {
 
   const handleClickMenu = () => {
     const body = document.querySelector('body');
-    const navMenu = document.querySelector('nav.menu');
+    const navMenu = document.querySelector('nav');
 
     navMenu.classList.toggle('menu_opened');
     body.classList.toggle('menu_opened');
@@ -31,7 +31,7 @@ export default function Header() {
   return (
     <section className="header_container">
       <section className="container">
-        <header>
+        <header className="header">
           <section className="logo">
             <a href={logo.link}><img src={logo.dark} alt={logo.title} title={logo.title}/> </a>
           </section>

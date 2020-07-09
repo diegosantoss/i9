@@ -15,8 +15,8 @@ const Home = () => {
   return (
     <BaseApp>
       <Slide slide={slide} />
-      <About about={about} />
       <Contact useful={useful} />
+      <About about={about} />
       <Why why={why} />
       <ServicesHome services={services} />
       <Expertise expertise={expertise} />

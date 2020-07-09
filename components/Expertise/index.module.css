@@ -58,6 +58,10 @@
     text-align: center;
   }
 
+  .expertise_align_items{
+    align-items: center;
+  }
+
   .expertise_content_item{
     text-align: left;
     margin: auto;

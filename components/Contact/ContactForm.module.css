@@ -1,0 +1,94 @@
+.contactform_container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  min-width: 100%;
+  min-height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, .5);
+  opacity: 0;
+  visibility: hidden;
+  transition: all .1s linear;
+}
+
+.contactform_content {
+  max-width: 500px;
+  width: 90%;
+  background-color: #FFF;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.contactform_title {
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+.contactform_form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;  
+}
+
+.contactform_form_item {
+  width: 49%;
+}
+
+
+.contactform_form_input_name {
+}
+
+.contactform_form_input_phone {
+}
+
+.contactform_form_input_email {
+}
+
+.contactform_form_input_subject {
+}
+
+.contactform_form_input_mensagem {
+  width: 100%;
+}
+
+.contactform_form_input_mensagem textarea{
+  height: 100px;
+}
+
+.contactform_form_input {
+  width: 100%;
+  border: 1px #a83330 solid;
+  padding: 7px 10px;
+  margin-bottom: 17px;
+  box-sizing: border-box;
+  outline: none;
+  color: #000;
+  font-size: 15px;
+  font-weight: 100;
+}
+
+
+.contactform_form_button {
+  width: 100%;
+    text-align: center;
+}
+
+.contactform_form_button_item {
+  font-size: 18px;
+  border: 1px #a83330 solid;
+  padding: 10px 30px;
+  background-color: #a83330;
+  color: #FFF;
+  cursor: pointer;border-radius: 5px;
+  transition: all .1s linear;
+}
+
+.contactform_form_button_item:hover{
+  background-color: transparent;
+  color: #a83330;
+}
