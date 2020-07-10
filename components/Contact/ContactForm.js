@@ -1,17 +1,23 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-import { maskTel } from '../Masks'
+import { maskTel } from '../Masks';
+import { Event } from '../Tracking';
+import BaseContext from '../Context';
 
 import styles from './ContactForm.module.css';
 
 const ContactForm = () => {
-  const [a, setA] = useState();
-
   console.log(maskTel('11954507550'));
+  const handleClickBudget = React.useContext(BaseContext);
 
   return (
-    <section className={styles.contactform_container}>
+    <section id="contactform_container" className={styles.contactform_container}>
       <section className={styles.contactform_content}>
+        <section className={styles.contactform_close} 
+          onClick={() => {
+            handleClickBudget('', true);
+          }}
+          >X</section>
         <section className={styles.contactform_title}>
           <h2 className="h2_default">SOLICITE UM ORÇAMENTO</h2>
         </section>

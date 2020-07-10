@@ -114,3 +114,8 @@ nav.menu ul li:last-child a{
   }
   
 }
+
+.open_contactform{
+  opacity: 1!important;
+  visibility: visible!important;
+}

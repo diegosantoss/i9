@@ -2,11 +2,14 @@ import React from 'react';
 import Link from 'next/link';
 
 import StaticData from '../../StaticData';
+import BaseContext from '../Context';
 import ContactForm from '../Contact/ContactForm';
 import styles from './index.module.css';
 
 const Footer = () => {
+  const handleClickBudget = React.useContext(BaseContext);
   const { useful, logo, socials } = StaticData;
+
   return (
     <footer>
       <section className={styles.footer_primary_container} style={{ backgroundImage: `url(${useful.footer_image})` }} >
@@ -17,7 +20,9 @@ const Footer = () => {
             <section className={styles.footer_primary_buttons}>
               <p>{useful.tel}</p>
               <Link href={useful.budget.link}>
-                <a><p>{useful.budget.footer}</p></a>
+                <a onClick={ () => {
+                  handleClickBudget(useful.budget.link);
+                }}><p>{useful.budget.footer}</p></a>
               </Link>
             </section>
           </section>
