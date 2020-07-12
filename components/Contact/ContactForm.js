@@ -11,7 +11,7 @@ const ContactForm = () => {
   const handleClickBudget = React.useContext(BaseContext);
 
   return (
-    <section id="contactform_container" className={styles.contactform_container} style={{ opacity: 0, visibility: hidden }}>
+    <section id="contactform_container" className={styles.contactform_container} style={{ opacity: 0, visibility: "hidden" }}>
       <section className={styles.contactform_content}>
         <section className={styles.contactform_close} 
           onClick={() => {
