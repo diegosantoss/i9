@@ -14,7 +14,7 @@ const Expertise = ({expertise}) => {
         <section className={`container ${styles.expertise_align_items}`}>
           {expertise.options.map( (item, index) => (
             <section key={index} className={styles.expertise_content_item}>
-              <img src={item.icon} width="60" />
+              <img src={item.icon} width="45" />
               <p>{item.text}</p>
             </section>
           ))}

@@ -10,7 +10,7 @@ const Why = ({why}) => {
         <section className={styles.why_content}>
           {why.options.map( (item, index) => (
             <section key={index} className={styles.why_content_item}>
-              <img src={item.icon} width="60" />
+              <img src={item.icon} width="40" />
               <p>{item.text}</p> 
             </section>
           ))}

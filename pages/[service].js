@@ -1,24 +1,30 @@
-import BaseApp from '../components/BaseApp';
+import React from 'react';
 import Parser from 'html-react-parser';
+
+import BaseApp from '../components/BaseApp';
+import Seo from '../components/Seo';
 import StaticData from '../StaticData/index';
 
 const Service = ({service}) => {
   return (
-    <BaseApp>
-      <section className="service_container">
-        <section className="service_image">
-          <img width="1920" src={service.image} />
-        </section>
-        <section className="service_content" style={{ backgroundImage: `url(${service.image})` }}>
-          <section className="container">
-            <section className="service_infos">
-              <h1>{service.title}</h1>
-              <p>{Parser(service.text)}</p>
+    <>
+      <Seo meta={service}/>
+      <BaseApp>
+        <section className="service_container">
+          <section className="service_image">
+            <img width="1920" src={service.image} />
+          </section>
+          <section className="service_content" style={{ backgroundImage: `url(${service.image})` }}>
+            <section className="container">
+              <section className="service_infos">
+                <h1>{service.title}</h1>
+                <p>{Parser(service.text)}</p>
+              </section>
             </section>
           </section>
-        </section>
-      </section> 
-    </BaseApp>
+        </section> 
+      </BaseApp>
+    </>
   )   
 }
 

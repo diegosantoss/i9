@@ -19,8 +19,13 @@
  }
  
  .why_content_item{
-   width: 50%;
-   box-sizing: border-box;
+  width: 50%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 30px;
  }
 
  .why_content_item:nth-child(odd){
@@ -34,11 +39,16 @@
   font-size: 16px;
   font-weight: normal;
   line-height: 1.4;
+  margin-left: 20px;
  }
 
  @media screen and (max-width: 991px){
   .why_content_item{
     width: 100%;
+  }
+
+  .why_texts h2{
+    text-align: center;
   }
 
   .why_content_item:nth-child(odd){

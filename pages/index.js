@@ -1,5 +1,8 @@
+import React from 'react';
+
 import BaseApp from '../components/BaseApp';
 
+import Seo from '../components/Seo';
 import ServicesHome from '../components/Services';
 import Why from '../components/Why';
 import Contact from '../components/Contact';
@@ -13,14 +16,17 @@ const Home = () => {
   const { slide, about, useful, services, why, expertise } = StaticData;
 
   return (
-    <BaseApp>
-      <Slide slide={slide} />
-      <Contact useful={useful} />
-      <About about={about} />
-      <Why why={why} />
-      <ServicesHome services={services} />
-      <Expertise expertise={expertise} />
-    </BaseApp>
+    <>
+      <Seo meta={useful} />
+      <BaseApp>
+        <Slide slide={slide} />
+        <Contact useful={useful} />
+        <About about={about} />
+        <Why why={why} />
+        <ServicesHome services={services} />
+        <Expertise expertise={expertise} />
+      </BaseApp>
+    </>
   )
 }
 

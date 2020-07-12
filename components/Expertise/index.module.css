@@ -12,7 +12,7 @@
 .expertise_texts h2 {
   line-height: 1.2;
   padding-bottom: 20px;
-  max-width: 385px;
+  max-width: 475px;
   width: 100%;
 }
 
@@ -23,7 +23,7 @@
 }
 
 .expertise_texts p{
-  max-width: 385px;
+  max-width: 475px;
   width: 100%;
   font-size: 16px;
   font-weight: normal;
@@ -35,7 +35,7 @@
 }
 
 .expertise_content_item {
-  max-width: 405px;
+  max-width: 475px;
   width: 100%;
   box-sizing: border-box;
   display: flex;
@@ -50,9 +50,14 @@
   font-size: 16px;
   font-weight: normal;
   line-height: 1.4;
+  margin-left: 20px;
 }
 
 @media screen and (max-width: 991px){
+  .expertise_container {
+    background-position: left center;
+  }
+
   .expertise_texts, .expertise_content{
     background-color: rgba(255, 255, 255, .7);
     text-align: center;
@@ -67,3 +72,4 @@
     margin: auto;
   }
 }
+

@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import Head from "next/head";
+
 import Header from "../Header";
 import Footer from "../Footer";
 import BaseContext from '../Context';
@@ -33,10 +34,6 @@ const BaseApp = (props) => {
 
   return(
     <BaseContext.Provider value={handleClickBudget}>
-      <Head>
-        <title>i9 Corporation</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
       <Header />
       {props.children}
       <Footer />
