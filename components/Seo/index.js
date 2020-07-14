@@ -11,7 +11,7 @@ const Seo = ({meta}) => {
 
       <title> {meta.seo_title} - i9 Corporation</title>
 
-      <meta charset="UTF-8" />
+      <meta charSet="UTF-8" />
       <meta name="robots" content="index,follow" />
       <meta name="googlebot" content="index,follow" />
       <meta name="description" content={meta.seo_description} />

@@ -28,7 +28,7 @@ const data = {
     },
     address: "Rua M.M.D.C, 450 - 5º Andar | Sala 501 a 503 - Butantã São Paulo, SP | CEP 05510-020",
     copyright: "Copyright © i9 Corporation",
-    seo_title: "i9 Corporation, há 14 anos oferecendo serviços de qualidade com foco em resultados - i9 Coporation",
+    seo_title: "i9 Corporation, há 14 anos oferecendo serviços de qualidade com foco em resultados",
     seo_description: "Há mais de 14 anos, a i9 Corporation oferece as mais modernas soluções em Facilities com um sistema de gestão que atende aos diversos segmentos corporativos, condomínios residenciais e/ou administrativos.",
     image: './favicon.ico'
   },
