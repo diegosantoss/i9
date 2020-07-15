@@ -1,7 +1,8 @@
 const mailer = require('nodemailer-promise');
 
 const nextSendMail = (req, res) => {
-  const { email, name, phone, subject, message } = req.body;
+  const { email, name, phone, typeOption, subject, message } = req.body;
+  console.log(req.body);
     
   var sendEmail = mailer.config({
     host: 'smtp.gmail.com',
@@ -14,6 +15,7 @@ const nextSendMail = (req, res) => {
   const html = `
     <p>Nome: ${name}</p>
     <p>Email: ${email}</p>
+    <p>Motivo do contato: ${typeOption}</p>
     <p>Telefone: ${phone}</p>
     <p>Assunto: ${subject}</p>
     <br />

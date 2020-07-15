@@ -70,6 +70,22 @@
 .contactform_form_input_email {
 }
 
+.contactform_form_input_radio {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;  
+}
+
+.contactform_form_input_radio label{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 17px;
+}
+
 .contactform_form_input_subject {
 }
 
@@ -93,6 +109,12 @@
   font-weight: 100;
 }
 
+.contactform_form_input_radio label input{
+  height: 12px;
+  width: 12px;
+  margin: 0 5px 0 0;
+}
+
 
 .contactform_form_button {
   width: 100%;
@@ -112,4 +134,12 @@
 .contactform_form_button_item:hover{
   background-color: transparent;
   color: #a83330;
+}
+
+@media screen and (max-width: 490px){
+  .contactform_form_input_radio label{
+    width: 50%;
+    box-sizing: border-box;
+    padding-right: 15px;
+  }
 }
