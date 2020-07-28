@@ -17,6 +17,8 @@ const ContactForm = () => {
   };
 
   const [form, setForm] = useState(INITIAL_FORM);
+  const [isSending, setIsSending] = useState(false);
+  const [resultForm, setResultForm] = useState(false);
 
   const handleClickBudget = React.useContext(BaseContext);
 
@@ -34,6 +36,7 @@ const ContactForm = () => {
 
   const handleSubmitForm = async (e) => {
     e.preventDefault();
+    setIsSending(true)
     
     await fetch('/api/contact', {
       method: 'post',
@@ -43,7 +46,17 @@ const ContactForm = () => {
       },
       body: JSON.stringify(form)
     }).then((res) => {
-      console.log(res)
+      console.log(res);
+
+      if(res.statusText === 'OK'){
+        setIsSending(false);
+        setResultForm(true);
+
+        setTimeout( () => {
+          setResultForm(false);
+          handleClickBudget('', true);
+        }, 5000)
+      }
     });
 
     setForm(INITIAL_FORM);
@@ -59,6 +72,10 @@ const ContactForm = () => {
             handleClickBudget('', true);
           }}
           >X</section>
+
+        {isSending && <span className={styles.isSendingBox}><p className={styles.spinner}></p></span>}
+        {resultForm && <span className={styles.isResultForm}><p className={styles.isResultForm_p}>Mensagem enviada com sucesso!</p></span>}
+
         <section className={styles.contactform_title}>
           <h2 className="h2_default">SOLICITE UM ORÇAMENTO</h2>
         </section>
@@ -68,7 +85,7 @@ const ContactForm = () => {
             <input type="text" placeholder="Nome*" name="name" className={styles.contactform_form_input} required value={form.name} onChange={(e) => handleChangeInput(e)} />
           </section>
           <section className={`${styles.contactform_form_item} ${styles.contactform_form_input_phone}`}>
-            <input type="tel" placeholder="Telefone*" name="phone" className={styles.contactform_form_input} required value={form.phone} onChange={(e) => handleChangeInput(e)} />
+            <input type="tel" placeholder="Telefone*" name="phone"maxLength="15" className={styles.contactform_form_input} required value={form.phone} onChange={(e) => handleChangeInput(e)} />
           </section>
           <section className={`${styles.contactform_form_item} ${styles.contactform_form_input_email}`}>
             <input type="email" placeholder="E-mail*" name="email" className={styles.contactform_form_input} required value={form.email} onChange={(e) => handleChangeInput(e)} />
@@ -99,6 +116,7 @@ const ContactForm = () => {
           </section>
           <section className={styles.contactform_form_button}>
             <button className={styles.contactform_form_button_item} type="submit">Enviar Mensagem</button>
+           
           </section>
         </form>
 

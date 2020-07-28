@@ -136,6 +136,58 @@
   color: #a83330;
 }
 
+.isSendingBox{
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, .8);
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: flex;
+  flex-direction: revert;
+  align-items: center;
+  justify-content: center;
+}
+
+.isResultForm{
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, .8);
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: flex;
+  flex-direction: revert;
+  align-items: center;
+  justify-content: center;
+}
+
+.isResultForm_p{
+  font-size: 16px;
+  color: #a83430;
+}
+
+.spinner {
+  border: 8px solid #a8343050;
+  border-left-color: #a83430;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 @media screen and (max-width: 490px){
   .contactform_form_input_radio label{
     width: 50%;
