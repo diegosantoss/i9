@@ -2,7 +2,6 @@ const mailer = require('nodemailer-promise');
 
 const nextSendMail = (req, res) => {
   const { email, name, phone, typeOption, subject, message } = req.body;
-  console.log(req.body);
     
   var sendEmail = mailer.config({
     host: 'smtp.gmail.com',
@@ -36,9 +35,8 @@ const nextSendMail = (req, res) => {
       return res.status(200).send({message: 'ok'});
     })   
     .catch(function(err){
-      // console.log('got error'); 
       // console.log(err)
-      return res.status(200).send({message: 'not ok'});
+      return res.status(401).send({message: 'not ok'});
     })
 } 
 

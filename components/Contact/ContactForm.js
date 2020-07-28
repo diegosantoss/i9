@@ -19,6 +19,8 @@ const ContactForm = () => {
   const [form, setForm] = useState(INITIAL_FORM);
   const [isSending, setIsSending] = useState(false);
   const [resultForm, setResultForm] = useState(false);
+  const [messageReturnForm, setMessageReturnForm] = useState('');
+  const [errorMessage, setErrorMessage] = useState(true);
 
   const handleClickBudget = React.useContext(BaseContext);
 
@@ -46,20 +48,30 @@ const ContactForm = () => {
       },
       body: JSON.stringify(form)
     }).then((res) => {
-      console.log(res);
 
-      if(res.statusText === 'OK'){
+      if(res.status === 200){
+        setMessageReturnForm('Mensagem enviada com sucesso! Responderemos o mais rápido possível.')
+        setIsSending(false);
+        setResultForm(true);
+        setForm(INITIAL_FORM);
+
+        setTimeout( () => {
+          setResultForm(false);
+          handleClickBudget('', true);
+        }, 5000);
+        
+      } else {
+        setMessageReturnForm('Algo deu errado, tente mais uma vez, por favor.')
         setIsSending(false);
         setResultForm(true);
 
         setTimeout( () => {
           setResultForm(false);
-          handleClickBudget('', true);
-        }, 5000)
+        }, 5000);        
       }
     });
 
-    setForm(INITIAL_FORM);
+    
     return false;
     
   }
@@ -74,7 +86,7 @@ const ContactForm = () => {
           >X</section>
 
         {isSending && <span className={styles.isSendingBox}><p className={styles.spinner}></p></span>}
-        {resultForm && <span className={styles.isResultForm}><p className={styles.isResultForm_p}>Mensagem enviada com sucesso!</p></span>}
+        {resultForm && <span className={styles.isResultForm}><p className={styles.isResultForm_p}>{messageReturnForm}</p></span>}
 
         <section className={styles.contactform_title}>
           <h2 className="h2_default">SOLICITE UM ORÇAMENTO</h2>
