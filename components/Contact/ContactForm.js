@@ -20,7 +20,6 @@ const ContactForm = () => {
   const [isSending, setIsSending] = useState(false);
   const [resultForm, setResultForm] = useState(false);
   const [messageReturnForm, setMessageReturnForm] = useState('');
-  const [errorMessage, setErrorMessage] = useState(true);
 
   const handleClickBudget = React.useContext(BaseContext);
 
